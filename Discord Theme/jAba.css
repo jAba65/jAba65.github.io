@@ -19,7 +19,7 @@ body{
     background-size: 105% 105% !important;
 }   
 /* blur на фоне */
-._960e4207cea8323e-bg {
+.bg__960e4 {
     backdrop-filter: blur(var(--blur-bg)) brightness(var(--brightness-bg));
 }
 
@@ -47,12 +47,12 @@ body{
 --green-360: rgba(255, 255, 255, 0.65);
 }
 /* Call BackGround*/
-.visual-refresh .bfe55a0aaaf62375-root{
+.visual-refresh .root_bfe55a{
     background: transparent;
 }
 
 /* Call BackGround*/
-.cb9592ad77576717-callContainer{
+.callContainer_cb9592{
     background: transparent;
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
     border-radius: 10px;
@@ -63,34 +63,34 @@ body{
 }
 
 /* Share Watch in Full Screen FIX*/
-.bfe55a0aaaf62375-gradientContainer {
+.gradientContainer_bfe55a {
     background-image: linear-gradient(
         rgba(255, 255, 255, 0.04) 0%,
         rgba(0, 0, 0, 0) 50%
     );
 }
-.cb9592ad77576717-callContainer:has(._6981dc6d72610110-actionRow) {
+.callContainer_cb9592:has(.actionRow__6981d) {
     margin: unset;
     border-radius: unset;
     border: unset;
     box-shadow: unset;
 }
 
-.f75fb00fb7356cbe-chat:has(._6981dc6d72610110-actionRow) {
+.chat_f75fb0:has(.actionRow__6981d) {
     border: unset !important;
 }
 
-.f75fb00fb7356cbe-chat:has(._6981dc6d72610110-actionRow) .f75fb00fb7356cbe-form {
+.chat_f75fb0:has(.actionRow__6981d) .form_f75fb0 {
     margin: unset !important;
 }
 
 /* Context Menu*/
-.c1e9c47c23f12ca3-menu{
+.menu_c1e9c4{
     background: rgba(0, 0, 0, 0.158);
     border: var(--border-main);
 
 }
-.c1e9c47c23f12ca3-menu::before{
+.menu_c1e9c4::before{
     backdrop-filter: blur(var(--blur-other));
     content: "";
     width: 100%;
@@ -108,44 +108,44 @@ body{
 }
 
 /* UP Profile BackGround*/
-._68edb95846a37624-banner{
+.banner__68edb{
  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* Profile BackGround*/
-.user-profile-modal,._24502a4069848acb-root,
+.user-profile-modal,.root__24502,
 /* LKM */
-.c0bea05627c5dc35-inner {
+.inner_c0bea0 {
     background: transparent !important;
     backdrop-filter: blur(10px);
 }
-.c0bea05627c5dc35-outer,
+.outer_c0bea0,
 /* LKM */
-.c0bea05627c5dc35-inner{
+.inner_c0bea0{
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* add status on myself dots */
-.ab86098b36386ff7-outer{
+.outer_ab8609{
     background: transparent;
 }
 /* ToolTip */
-.c36707910f687430-tooltip{
+.tooltip_c36707{
 background: rgba(0, 0, 0, 0.15) !important;
 backdrop-filter: blur(var(--blur-other));
 box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
-.c36707910f687430-tooltipPrimary .c36707910f687430-tooltipPointer{
+.tooltipPrimary_c36707 .tooltipPointer_c36707{
     display: none;
 }
 /* ToolTips in Chat */
-.visual-refresh .f7ecaca5c80dbf3a-wrapper{
+.visual-refresh .wrapper_f7ecac{
     background: transparent;
     backdrop-filter: blur(var(--blur-other));
     border: var(--border-main);
 }
 /* ToolTips in Server */
-.b49891f8a231dbff-reactionTooltip{
+.reactionTooltip_b49891{
     background: rgba(255, 255, 255, 0) !important;
     backdrop-filter: blur(var(--blur-other));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -153,21 +153,21 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 
 
 /* DownloadButton */
-._06ab41fd2ef7af3f-hoverButtonGroup{
+.hoverButtonGroup__06ab4{
 backdrop-filter: blur(var(--blur-other));
 box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 
 /* Chat */
-.f75fb00fb7356cbe-channelBottomBarArea{
+.channelBottomBarArea_f75fb0{
     backdrop-filter: blur(var(--blur-other))
 }
-.f75fb00fb7356cbe-channelTextArea{
+.channelTextArea_f75fb0{
     background: transparent !important;
 }
 /* ??????????????????????????????????????????? */
-._740174f3d6a2c8fe-scrollableContainer{
+.scrollableContainer__74017{
 background: rgba(255, 255, 255, 0.03) !important;  
 border: var(--border-main);
 box-shadow: var(--boxshadow);
@@ -175,80 +175,80 @@ box-shadow: var(--boxshadow);
 
 
 /* Call Status, and etc */
-.visual-refresh ._5e434347c823b592-panels{
+.visual-refresh .panels__5e434{
 border: var(--border-main) !important;
 backdrop-filter: blur(var(--blur-bg));
 background: rgba(255, 255, 255, 0.03) !important;  
 box-shadow: var(--boxshadow);
 }
 /* UP Panel Call Status, and etc */
-._5dec784a68542d60-panel{
+.panel__5dec7{
     background: transparent !important;
 }
 
 
 /* Read All button */
-button.vc-ranb-button._201d5e8a3c09670a-button._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-sizeMin._201d5e8a3c09670a-grow{
+button.vc-ranb-button.button__201d5.lookFilled__201d5.sizeMin__201d5.grow__201d5{
 border: none;
 }
 
 
 /* CheckBox */
-._3f21e80f8677ec40-container._3f21e80f8677ec40-checked{
+.container__3f21e.checked__3f21e{
     background-color: rgba(255, 255, 255, 0.24) !important;
 }
 
 /* Profile card */
-._1fed1dd06c7aabf7-accountProfileCard{
+.accountProfileCard__1fed1{
     border: var(--border-main);
 }
 
 
 /* ВЫДАЧА ДЕМКИ */
 /* АРТ */
-.a55fdc2c56e0e44c-artContainer{
+.artContainer_a55fdc{
     display: none !important;
 }
 /* НИЗ/ВЕРХ */
-.a55fdc2c56e0e44c-border,.a55fdc2c56e0e44c-modalFooter{
+.border_a55fdc,.modalFooter_a55fdc{
     background-color: rgba(255, 255, 255, 0.05) !important;
     backdrop-filter: blur(20px)
 }
 /* ГРАДИЕНТ */  
-.visual-refresh .a55fdc2c56e0e44c-container{
+.visual-refresh .container_a55fdc{
      background: radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0) 60%, transparent 100%), linear-gradient(270deg, rgba(27, 27, 29, 0.5) 0, rgba(35, 35, 39, 0.5) 100%)
 }
 /* ВЫДАЧА ДЕМКИ */
 
 /* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
-._1405b3b8e8eb5fd0-buttonSection{
+.buttonSection__1405b{
     background: radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(40, 39, 43, 0.5) 0, rgba(29, 29, 32, 0.5) 100%) !important;
     backdrop-filter: blur(10px)
 }
 
-.f1ceaca61b18918e-disconnect {
+.disconnect_f1ceac {
     background: radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(122, 71, 90, 0.5) 0, rgba(122, 71, 86, 0.5) 100%) !important;
 }
 
-._1405b3b8e8eb5fd0-buttonSection,.f1ceaca61b18918e-disconnect{
+.buttonSection__1405b,.disconnect_f1ceac{
     border: none;
 }
 /* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
 
 /* СМЕНА РЕГИОНА */
-.ebaca56eb4bb23eb-quickSelectPopout{
+.quickSelectPopout_ebaca5{
     background: rgba(255, 255, 255, 0.15) !important;
     backdrop-filter: blur(10px)
 }
 /* СМЕНА РЕГИОНА */
 
 /* MESSAGEBOX */
-._49fc18ba07c5025f-root{
+.root__49fc1{
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px)
 }
 
-._49fc18ba07c5025f-footer{
+.footer__49fc1{
     background: transparent;
 }
 /* MESSAGEBOX */
@@ -261,7 +261,7 @@ border: none;
 /* НАЖАТЫЕ КНОПКИ */
 
 /* ПРОГРЕСС БАР ЗВУК  */
-.a562c840daab72a7-barFill{
+.barFill_a562c8{
     background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
 		radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);;
     border: none;
@@ -269,21 +269,21 @@ border: none;
 }
 /* ПРОГРЕСС БАР ЗВУК  */
 
-._2f4f7eb58b61c328-border._2f4f7eb58b61c328-speaking{
+.border__2f4f7.speaking__2f4f7{
    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.2) inset;
 }
 /* ИНФОРМАЦИЯ СПРАВА В ПРОФИЛЕ  */
-:where(.c0bea05627c5dc35-overlay){
+:where(.overlay_c0bea0){
     background: rgba(145, 145, 145, 0.1);
     border: var(--border-main) !important;
 }
 /* ЗАКРЕПЫ  */
-.visual-refresh .e8b59c4b335dd2fc-messagesPopoutWrap, .visual-refresh .e8b59c4b335dd2fc-messageGroupWrapper{
+.visual-refresh .messagesPopoutWrap_e8b59c, .visual-refresh .messageGroupWrapper_e8b59c{
     background: rgba(120, 120, 120, 0.1);
     backdrop-filter: blur(10px)
 }
 
-.visual-refresh ._0ccaee68b77c7469-file{
+.visual-refresh .file__0ccae{
    background: rgba(0, 0, 0, 0.3); 
 }
 .visual-refresh .jumpButton_e8b59c{
@@ -291,18 +291,17 @@ border: none;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-._06ab41fd2ef7af3f-hoverButtonGroup{
+.hoverButtonGroup__06ab4{
     background: rgba(255, 255, 255, 0.1);
     border: var(--border-main) !important;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-.visual-refresh .e8b59c4b335dd2fc-header{
+.visual-refresh .header_e8b59c{
     background: rgba(0, 0, 0, 0.3);
     border-bottom: var(--border-main) !important;
 }
 
-.cb9592ad77576717-wrapper.cb9592ad77576717-minimum{
+.wrapper_cb9592.minimum_cb9592{
     background: transparent !important;
 }
-
