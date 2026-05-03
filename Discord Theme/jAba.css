@@ -1,58 +1,87 @@
+/* ==========================================================================
+   1. ИМПОРТЫ
+   ========================================================================== */
+ 
 @import url("https://eject37.github.io/DiscordTheme/BetterFont.css");
 @import url("https://eject37.github.io/DiscordTheme/HideTrash.css");
-
-:root{
+ 
+ 
+/* ==========================================================================
+   2. ПЕРЕМЕННЫЕ
+   ========================================================================== */
+ 
+:root {
+    /* Фон */
     --app-bg: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDR5cmR6ZjYydWxtYmpwc3pwOHBkNmZjbnRldHAxYzQxZDNsbmw1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ov9jWPi1AH2XUfI6Q/giphy.gif);
     --blur-bg: 80px;
     --blur-other: 30px;
     --brightness-bg: 0.5;
-
-    --color-main: rgba(255,255,255,0.1);
-    --border-main:  1px solid rgba(255, 255, 255, 0.1);
+ 
+    /* Общие стили */
+    --color-main: rgba(255, 255, 255, 0.1);
+    --border-main: 1px solid rgba(255, 255, 255, 0.1);
     --boxshadow: inset 0 0 10px rgba(100, 100, 100, 0.1);
 }
-
-
-body{
+ 
+ 
+/* ==========================================================================
+   3. ФОН ПРИЛОЖЕНИЯ
+   ========================================================================== */
+ 
+body {
     background: var(--app-bg) !important;
     background-position: 15% !important;
     background-size: 105% 105% !important;
-}   
-/* blur на фоне */
+}
+ 
+/* Размытие на фоне */
 .bg__960e4 {
     backdrop-filter: blur(var(--blur-bg)) brightness(var(--brightness-bg));
 }
-
-.visual-refresh .theme-darker, .visual-refresh.theme-darker{
---background-base-lowest: transparent;
---bg-base-tertiary: transparent;
---background-tertiary: transparent;
---background-secondary: transparent;
---background-primary: transparent;
---background-base-lower: transparent;
---custom-channel-members-bg: transparent;
---background-base-low: transparent;
---bg-brand: rgba(255, 255, 255, 0.2);
---background-code: rgba(255, 255, 255, 0.05);
---button-filled-brand-background: rgba(255, 255, 255, 0.1);
---button-filled-brand-background-hover: rgba(255, 255, 255, 0.2);
---background-surface-high: rgba(255, 255, 255, 0.15);
---background-secondary-alt: rgba(255, 255, 255, 0.1);
---background-modifier-hover: rgba(255, 255, 255, 0.15);
---background-mod-subtle: rgba(255, 255, 255, 0.15);
---card-primary-bg: rgba(255, 255, 255, 0.15);
---bg-base-secondary: rgba(255, 255, 255, 0.15);
---brand-500: rgba(91, 103, 234, 0.4);
---text-feedback-positive: rgba(255, 255, 255, 0.65);
---green-360: rgba(255, 255, 255, 0.65);
+ 
+ 
+/* ==========================================================================
+   4. БАЗОВАЯ ТЕМА (visual-refresh override)
+   ========================================================================== */
+ 
+.visual-refresh .theme-darker,
+.visual-refresh.theme-darker {
+    --background-base-lowest: transparent;
+    --bg-base-tertiary: transparent;
+    --background-tertiary: transparent;
+    --background-secondary: transparent;
+    --background-primary: transparent;
+    --background-base-lower: transparent;
+    --custom-channel-members-bg: transparent;
+    --background-base-low: transparent;
+ 
+    --bg-brand: rgba(255, 255, 255, 0.2);
+    --background-code: rgba(255, 255, 255, 0.05);
+    --button-filled-brand-background: rgba(255, 255, 255, 0.1);
+    --button-filled-brand-background-hover: rgba(255, 255, 255, 0.2);
+    --background-surface-high: rgba(255, 255, 255, 0.15);
+    --background-secondary-alt: rgba(255, 255, 255, 0.1);
+    --background-modifier-hover: rgba(255, 255, 255, 0.15);
+    --background-mod-subtle: rgba(255, 255, 255, 0.15);
+    --card-primary-bg: rgba(255, 255, 255, 0.15);
+    --bg-base-secondary: rgba(255, 255, 255, 0.15);
+ 
+    --brand-500: rgba(91, 103, 234, 0.4);
+    --text-feedback-positive: rgba(255, 255, 255, 0.65);
+    --green-360: rgba(255, 255, 255, 0.65);
 }
-/* Call BackGround*/
-.visual-refresh .root_bfe55a{
+ 
+ 
+/* ==========================================================================
+   5. ЗВОНКИ И ГОЛОСОВЫЕ КАНАЛЫ
+   ========================================================================== */
+ 
+/* Фон звонка */
+.visual-refresh .root_bfe55a {
     background: transparent;
 }
-
-/* Call BackGround*/
-.callContainer_cb9592{
+ 
+.callContainer_cb9592 {
     background: transparent;
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
     border-radius: 10px;
@@ -61,247 +90,310 @@ body{
     margin-right: 10px;
     margin-top: 10px;
 }
-
-/* Share Watch in Full Screen FIX*/
+ 
+.wrapper_cb9592.minimum_cb9592 {
+    background: transparent !important;
+}
+ 
+/* Демонстрация / просмотр в полноэкранном режиме (fix) */
 .gradientContainer_bfe55a {
     background-image: linear-gradient(
         rgba(255, 255, 255, 0.04) 0%,
         rgba(0, 0, 0, 0) 50%
     );
 }
+ 
 .callContainer_cb9592:has(.actionRow__6981d) {
     margin: unset;
     border-radius: unset;
     border: unset;
     box-shadow: unset;
 }
-
+ 
 .chat_f75fb0:has(.actionRow__6981d) {
     border: unset !important;
 }
-
+ 
 .chat_f75fb0:has(.actionRow__6981d) .form_f75fb0 {
     margin: unset !important;
 }
-
-/* Context Menu*/
-.menu_c1e9c4{
+ 
+/* Индикатор говорящего */
+.border__2f4f7.speaking__2f4f7 {
+    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.2) inset;
+}
+ 
+ 
+/* ==========================================================================
+   6. КОНТЕКСТНОЕ МЕНЮ И ПОПАПЫ
+   ========================================================================== */
+ 
+.menu_c1e9c4 {
     background: rgba(0, 0, 0, 0.158);
     border: var(--border-main);
-
 }
-.menu_c1e9c4::before{
-    backdrop-filter: blur(var(--blur-other));
+ 
+.menu_c1e9c4::before {
     content: "";
-    width: 100%;
-    height: 100%;
     position: absolute;
-    pointer-events: none;
-    z-index: -1;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(var(--blur-other));
+    pointer-events: none;
+    z-index: -1;
     border-radius: 8px;
 }
-/* Fix picture open */
-#image-context[class*="c1e9c47c23f12ca3-menu"]{
-     backdrop-filter: blur(var(--blur-other));
+ 
+/* Открытие изображения */
+#image-context[class*="c1e9c47c23f12ca3-menu"] {
+    backdrop-filter: blur(var(--blur-other));
 }
-
-/* UP Profile BackGround*/
-.banner__68edb{
- background: rgba(255, 255, 255, 0.05) !important;
+ 
+ 
+/* ==========================================================================
+   7. ТУЛТИПЫ
+   ========================================================================== */
+ 
+/* Базовый тултип */
+.tooltip_c36707 {
+    background: rgba(0, 0, 0, 0.15) !important;
+    backdrop-filter: blur(var(--blur-other));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
-
-/* Profile BackGround*/
-.user-profile-modal,.root__24502,
-/* LKM */
-.inner_c0bea0 {
-    background: transparent !important;
-    backdrop-filter: blur(10px);
-}
-.outer_c0bea0,
-/* LKM */
-.inner_c0bea0{
-    background: rgba(255, 255, 255, 0.05) !important;
-}
-
-/* add status on myself dots */
-.outer_ab8609{
-    background: transparent;
-}
-/* ToolTip */
-.tooltip_c36707{
-background: rgba(0, 0, 0, 0.15) !important;
-backdrop-filter: blur(var(--blur-other));
-box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-}
-.tooltipPrimary_c36707 .tooltipPointer_c36707{
+ 
+.tooltipPrimary_c36707 .tooltipPointer_c36707 {
     display: none;
 }
-/* ToolTips in Chat */
-.visual-refresh .wrapper_f7ecac{
+ 
+/* Тултипы в чате */
+.visual-refresh .wrapper_f7ecac {
     background: transparent;
     backdrop-filter: blur(var(--blur-other));
     border: var(--border-main);
 }
-/* ToolTips in Server */
-.reactionTooltip_b49891{
+ 
+/* Тултипы реакций на сервере */
+.reactionTooltip_b49891 {
     background: rgba(255, 255, 255, 0) !important;
     backdrop-filter: blur(var(--blur-other));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
-
-/* DownloadButton */
-.hoverButtonGroup__06ab4{
-backdrop-filter: blur(var(--blur-other));
-box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+ 
+ 
+/* ==========================================================================
+   8. ПРОФИЛИ
+   ========================================================================== */
+ 
+/* Баннер (верх профиля) */
+.banner__68edb {
+    background: rgba(255, 255, 255, 0.05) !important;
 }
-
-
-/* Chat */
-.channelBottomBarArea_f75fb0{
-    backdrop-filter: blur(var(--blur-other))
-}
-.channelTextArea_f75fb0{
+ 
+/* Фон модалки профиля и ЛКМ */
+.user-profile-modal,
+.root__24502,
+.inner_c0bea0 {
     background: transparent !important;
+    backdrop-filter: blur(10px);
 }
-/* ??????????????????????????????????????????? */
-.scrollableContainer__74017{
-background: rgba(255, 255, 255, 0.03) !important;  
-border: var(--border-main);
-box-shadow: var(--boxshadow);
+ 
+.outer_c0bea0,
+.inner_c0bea0 {
+    background: rgba(255, 255, 255, 0.05) !important;
 }
-
-
-/* Call Status, and etc */
-.visual-refresh .panels__5e434{
-border: var(--border-main) !important;
-backdrop-filter: blur(var(--blur-bg));
-background: rgba(255, 255, 255, 0.03) !important;  
-box-shadow: var(--boxshadow);
-}
-/* UP Panel Call Status, and etc */
-.panel__5dec7{
-    background: transparent !important;
-}
-
-
-/* Read All button */
-button.vc-ranb-button.button__201d5.lookFilled__201d5.sizeMin__201d5.grow__201d5{
-border: none;
-}
-
-
-/* CheckBox */
-.container__3f21e.checked__3f21e{
-    background-color: rgba(255, 255, 255, 0.24) !important;
-}
-
-/* Profile card */
-.accountProfileCard__1fed1{
-    border: var(--border-main);
-}
-
-
-/* ВЫДАЧА ДЕМКИ */
-/* АРТ */
-.artContainer_a55fdc{
-    display: none !important;
-}
-/* НИЗ/ВЕРХ */
-.border_a55fdc,.modalFooter_a55fdc{
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(20px)
-}
-/* ГРАДИЕНТ */  
-.visual-refresh .container_a55fdc{
-     background: radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0) 60%, transparent 100%), linear-gradient(270deg, rgba(27, 27, 29, 0.5) 0, rgba(35, 35, 39, 0.5) 100%)
-}
-/* ВЫДАЧА ДЕМКИ */
-
-/* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
-.buttonSection__1405b{
-    background: radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(40, 39, 43, 0.5) 0, rgba(29, 29, 32, 0.5) 100%) !important;
-    backdrop-filter: blur(10px)
-}
-
-.disconnect_f1ceac {
-    background: radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(122, 71, 90, 0.5) 0, rgba(122, 71, 86, 0.5) 100%) !important;
-}
-
-.buttonSection__1405b,.disconnect_f1ceac{
-    border: none;
-}
-/* ПАНЕЛЬ УПРАВЛЕНИЯ В  ГОЛОСОВ КАНАЛЕ */
-
-/* СМЕНА РЕГИОНА */
-.quickSelectPopout_ebaca5{
-    background: rgba(255, 255, 255, 0.15) !important;
-    backdrop-filter: blur(10px)
-}
-/* СМЕНА РЕГИОНА */
-
-/* MESSAGEBOX */
-.root__49fc1{
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px)
-}
-
-.footer__49fc1{
+ 
+/* Точка статуса на собственном профиле */
+.outer_ab8609 {
     background: transparent;
 }
-/* MESSAGEBOX */
-
-/* НАЖАТЫЕ КНОПКИ */
-:where(.visual-refresh) .checkbox_f525d3.checked_f525d3{
-    background: radial-gradient(90.42% 100% at 50% 100%, rgba(226, 135, 135, 0.5) 60%, transparent 100%), linear-gradient(270deg, rgba(31, 17, 119, 0.5) 0, rgba(130, 110, 238, 0.5) 100%) !important;
-    border: none;
+ 
+/* Карточка аккаунта */
+.accountProfileCard__1fed1 {
+    border: var(--border-main);
 }
-/* НАЖАТЫЕ КНОПКИ */
-
-/* ПРОГРЕСС БАР ЗВУК  */
-.barFill_a562c8{
-    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
-		radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);;
-    border: none;
-    background-color: transparent !important;
-}
-/* ПРОГРЕСС БАР ЗВУК  */
-
-.border__2f4f7.speaking__2f4f7{
-   box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.2) inset;
-}
-/* ИНФОРМАЦИЯ СПРАВА В ПРОФИЛЕ  */
-:where(.overlay_c0bea0){
+ 
+/* Боковая информация в профиле */
+:where(.overlay_c0bea0) {
     background: rgba(145, 145, 145, 0.1);
     border: var(--border-main) !important;
 }
-/* ЗАКРЕПЫ  */
-.visual-refresh .messagesPopoutWrap_e8b59c, .visual-refresh .messageGroupWrapper_e8b59c{
-    background: rgba(120, 120, 120, 0.1);
-    backdrop-filter: blur(10px)
+ 
+ 
+/* ==========================================================================
+   9. ЧАТ
+   ========================================================================== */
+ 
+.channelBottomBarArea_f75fb0 {
+    backdrop-filter: blur(var(--blur-other));
 }
-
-.visual-refresh .file__0ccae{
-   background: rgba(0, 0, 0, 0.3); 
+ 
+.channelTextArea_f75fb0 {
+    background: transparent !important;
 }
-.visual-refresh .jumpButton_e8b59c{
-    background: rgba(0, 0, 0, 0.35);
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+ 
+/* Скроллабельный контейнер */
+.scrollableContainer__74017 {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: var(--border-main);
+    box-shadow: var(--boxshadow);
 }
-
-.hoverButtonGroup__06ab4{
+ 
+/* Кнопка скачивания файла (hover-группа) */
+/* (объединено: было два отдельных правила в исходнике) */
+.hoverButtonGroup__06ab4 {
     background: rgba(255, 255, 255, 0.1);
     border: var(--border-main) !important;
+    backdrop-filter: blur(var(--blur-other));
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
-
-.visual-refresh .header_e8b59c{
+ 
+ 
+/* ==========================================================================
+   10. ЗАКРЕПЛЁННЫЕ СООБЩЕНИЯ
+   ========================================================================== */
+ 
+.visual-refresh .messagesPopoutWrap_e8b59c,
+.visual-refresh .messageGroupWrapper_e8b59c {
+    background: rgba(120, 120, 120, 0.1);
+    backdrop-filter: blur(10px);
+}
+ 
+.visual-refresh .header_e8b59c {
     background: rgba(0, 0, 0, 0.3);
     border-bottom: var(--border-main) !important;
 }
-
-.wrapper_cb9592.minimum_cb9592{
+ 
+.visual-refresh .file__0ccae {
+    background: rgba(0, 0, 0, 0.3);
+}
+ 
+.visual-refresh .jumpButton_e8b59c {
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+ 
+ 
+/* ==========================================================================
+   11. ПАНЕЛИ УПРАВЛЕНИЯ
+   ========================================================================== */
+ 
+/* --- Нижняя панель: статус звонка и т.д. --- */
+.visual-refresh .panels__5e434 {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: var(--border-main) !important;
+    backdrop-filter: blur(var(--blur-bg));
+    box-shadow: var(--boxshadow);
+}
+ 
+.panel__5dec7 {
     background: transparent !important;
 }
+ 
+/* --- Панель управления в голосовом канале --- */
+.buttonSection__1405b {
+    background:
+        radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%),
+        linear-gradient(270deg, rgba(40, 39, 43, 0.5) 0, rgba(29, 29, 32, 0.5) 100%) !important;
+    backdrop-filter: blur(10px);
+}
+ 
+.disconnect_f1ceac {
+    background:
+        radial-gradient(90.42% 100% at 50% 100%, rgba(19, 18, 18, 0.5) 60%, transparent 100%),
+        linear-gradient(270deg, rgba(122, 71, 90, 0.5) 0, rgba(122, 71, 86, 0.5) 100%) !important;
+}
+ 
+.buttonSection__1405b,
+.disconnect_f1ceac {
+    border: none;
+}
+ 
+ 
+/* ==========================================================================
+   12. КНОПКИ И ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ
+   ========================================================================== */
+ 
+/* Кнопка "Прочитать всё" (плагин Vencord ReadAllNotificationsButton) */
+button.vc-ranb-button.button__201d5.lookFilled__201d5.sizeMin__201d5.grow__201d5 {
+    border: none;
+}
+ 
+/* Чекбокс (отмеченный) */
+.container__3f21e.checked__3f21e {
+    background-color: rgba(255, 255, 255, 0.24) !important;
+}
+ 
+/* Нажатые кнопки (фиолетово-розовый градиент) */
+:where(.visual-refresh) .checkbox_f525d3.checked_f525d3 {
+    background:
+        radial-gradient(90.42% 100% at 50% 100%, rgba(226, 135, 135, 0.5) 60%, transparent 100%),
+        linear-gradient(270deg, rgba(31, 17, 119, 0.5) 0, rgba(130, 110, 238, 0.5) 100%) !important;
+    border: none;
+}
+ 
+ 
+/* ==========================================================================
+   13. ПРОГРЕСС-БАРЫ И ИНДИКАТОРЫ
+   ========================================================================== */
+ 
+/* Прогресс-бар громкости (золотой градиент) */
+.barFill_a562c8 {
+    background:
+        radial-gradient(ellipse farthest-corner at right bottom,
+            #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top,
+            #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    background-color: transparent !important;
+    border: none;
+}
+ 
+ 
+/* ==========================================================================
+   14. ПРОЧЕЕ
+   ========================================================================== */
+ 
+/* --- Выдача демки --- */
+ 
+/* Скрыть арт */
+.artContainer_a55fdc {
+    display: none !important;
+}
+ 
+/* Низ / верх */
+.border_a55fdc,
+.modalFooter_a55fdc {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(20px);
+}
+ 
+/* Градиент */
+.visual-refresh .container_a55fdc {
+    background:
+        radial-gradient(90.42% 100% at 50% 100%, rgba(0, 0, 0, 0) 60%, transparent 100%),
+        linear-gradient(270deg, rgba(27, 27, 29, 0.5) 0, rgba(35, 35, 39, 0.5) 100%);
+}
+ 
+ 
+/* --- Смена региона --- */
+.quickSelectPopout_ebaca5 {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+}
+ 
+ 
+/* --- MessageBox --- */
+.root__49fc1 {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+}
+ 
+.footer__49fc1 {
+    background: transparent;
+}
+ 
+ .container_abd9a8{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+ }
